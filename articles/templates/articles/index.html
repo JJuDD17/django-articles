@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+</head>
+<body>
+    {% if latest_articles_list %}
+        <p>Articles list:</p>
+        <ul>
+            {% for article in latest_articles_list %}
+                <li><a href="/article-{{ article.id }}/">{{ article.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No articles are available.</p>
+    {% endif %}
+</body>
+</html>

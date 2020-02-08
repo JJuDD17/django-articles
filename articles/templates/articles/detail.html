@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ article.title }}</title>
+</head>
+<body>
+    <a href="/">Main page</a>
+    {% if article %}
+        <h1>{{ article.title }}</h1>
+        <p>Published by {{ article.author_name }} on {{ article.publish_date }}</p>
+        <p>{{ article.article_text }}</p>
+        <p>Rating: {{ article.rating }}</p>
+    {% else %}
+        <p>There are no articles with such id.</p>
+    {% endif %}
+</body>
+</html>
